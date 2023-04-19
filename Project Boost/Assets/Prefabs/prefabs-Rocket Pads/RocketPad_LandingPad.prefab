@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3828520286858744162, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_Name
-      value: RocketPad
+      value: RocketPad_LandingPad
       objectReference: {fileID: 0}
     - target: {fileID: 4553347210493184978, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_RootOrder
@@ -17,11 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4553347210493184978, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4553347210493184978, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4553347210493184978, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33,15 +33,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4553347210493184978, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4553347210493184978, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4553347210493184978, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4553347210493184978, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,6 +54,10 @@ PrefabInstance:
     - target: {fileID: 4553347210493184978, guid: d6044175514543d4988dc44b529337d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428651923203753272, guid: d6044175514543d4988dc44b529337d5, type: 3}
+      propertyPath: m_TagString
+      value: RocketPad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6044175514543d4988dc44b529337d5, type: 3}
