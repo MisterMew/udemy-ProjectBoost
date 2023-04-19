@@ -4,12 +4,15 @@ public class PlayerController : MonoBehaviour
 {
     /* Variables */
     private Rigidbody rigidbody = default;
+    private PlayerAudio playerAudio = default;
+
     [SerializeField] private float mainThrustForce = 0F;
     [SerializeField] private float rotationAngle = 0F;
 
-    void Start()
+    void Awake()
     {
         rigidbody = GetComponentInChildren<Rigidbody>();
+        playerAudio = GetComponentInChildren<PlayerAudio>();
     }
 
     void Update()
@@ -22,6 +25,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             rigidbody.AddRelativeForce(Vector3.up * mainThrustForce * Time.deltaTime, ForceMode.Force);
+            playerAudio.PlayAudio(playerAudio.rocketThrustAudio);
+        }
+        else
+        {
+            playerAudio.PlayAudio(playerAudio.rocketThrustAudio, false);
         }
 
         if (Input.GetKey(KeyCode.A))
