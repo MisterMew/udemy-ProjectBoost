@@ -775,9 +775,10 @@ GameObject:
   - component: {fileID: 6099583662847719453}
   - component: {fileID: 285017743}
   - component: {fileID: 285017746}
+  - component: {fileID: 285017747}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -841,6 +842,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketThrustAudio: {fileID: 2526643105653764356}
+--- !u!114 &285017747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2526643107263111676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0032582131e7ef947b58d02b19947a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2526643107429392667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,7 +2240,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1360
+  m_VersionIndex: 1390
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3323,7 +3336,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2332
+  m_VersionIndex: 2362
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
