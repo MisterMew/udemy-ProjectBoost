@@ -25,11 +25,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             rigidbody.AddRelativeForce(Vector3.up * mainThrustForce * Time.deltaTime, ForceMode.Force);
-            playerAudio.PlayAudio(playerAudio.rocketThrustAudio);
+            playerAudio.PlayAudio(playerAudio.sfxRocketThrust);
         }
         else
         {
-            playerAudio.PlayAudio(playerAudio.rocketThrustAudio, false);
+            playerAudio.PlayAudio(playerAudio.sfxRocketThrust, false);
         }
 
         if (Input.GetKey(KeyCode.A))

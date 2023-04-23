@@ -3,15 +3,19 @@ using UnityEngine;
 public class PlayerAudio : MonoBehaviour
 {
     /* Variables */
-    public AudioSource rocketThrustAudio;
+    private AudioSource audioSource = default;
+    public AudioClip sfxRocketThrust = null;
+    public AudioClip sfxRocketCollision = null;
+    public AudioClip sfxLevelWin = null;
 
+    private void Awake() => audioSource = GetComponentInChildren<AudioSource>();
 
-    public void PlayAudio(AudioSource audio, bool playAudio = true)
+    public void PlayAudio(AudioClip audioClip, bool playAudio = true)
     {
-        if (playAudio && !audio.isPlaying) 
-            audio.Play();
+        if (playAudio && !audioSource.isPlaying)
+            audioSource.PlayOneShot(audioClip);
         
         if (!playAudio)
-            audio.Stop();
+            audioSource.Stop();
     }
 }
