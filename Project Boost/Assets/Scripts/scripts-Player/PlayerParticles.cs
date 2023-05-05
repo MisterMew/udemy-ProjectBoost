@@ -5,8 +5,8 @@ public class PlayerParticles : MonoBehaviour
 {
     [SerializeField] public ParticleSystem crashExplosion = null;
     [SerializeField] public ParticleSystem winParticles = null;
-    [SerializeField] public ParticleSystem leftThrustParticles = null;
-    [SerializeField] public ParticleSystem rightThrustParticles = null;
+    [SerializeField] private ParticleSystem leftThrustParticles = null;
+    [SerializeField] private ParticleSystem rightThrustParticles = null;
     [SerializeField] private List<ParticleSystem> mainThrusterParticles = new List<ParticleSystem>();
 
     public void Play(ParticleSystem ptSys)

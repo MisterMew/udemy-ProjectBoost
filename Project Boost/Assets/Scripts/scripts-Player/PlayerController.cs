@@ -31,16 +31,9 @@ public class PlayerController : MonoBehaviour
 
         // Thrust
         if (Input.GetKey(KeyCode.Space))
-        {
-            rigidbody.AddRelativeForce(Vector3.up * mainThrustForce * Time.deltaTime, ForceMode.Force);
-            playerAudio.PlayAudio(playerAudio.sfxRocketThrust);
-            playerParticles.ToggleMainThrust();
-        }
+            StartRocketThrust();
         else
-        {
-            playerAudio.PlayAudio(playerAudio.sfxRocketThrust, false);
-            playerParticles.ToggleMainThrust(false);
-        }
+            StopRocketThrust();
 
         // Tilt Left
         if (Input.GetKey(KeyCode.A))
@@ -63,6 +56,18 @@ public class PlayerController : MonoBehaviour
         {
             playerParticles.ToggleSideThrust("L", false);
         }
+    }
+
+    private void StartRocketThrust()
+    {
+        rigidbody.AddRelativeForce(Vector3.up * mainThrustForce * Time.deltaTime, ForceMode.Force);
+        playerAudio.PlayAudio(playerAudio.sfxRocketThrust);
+        playerParticles.ToggleMainThrust();
+    }
+    private void StopRocketThrust()
+    {
+        playerAudio.PlayAudio(playerAudio.sfxRocketThrust, false);
+        playerParticles.ToggleMainThrust(false);
     }
 
     private void HandleRotation(float rotationAngle)

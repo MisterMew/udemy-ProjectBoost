@@ -754,6 +754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1378200859}
+  - component: {fileID: 1378200860}
   - component: {fileID: 1378200858}
   m_Layer: 0
   m_Name: Game Managers
@@ -789,6 +790,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1378200860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378200857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e49428c42aa0a15488b2028ddb657e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!850595691 &1661784528
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1280,18 +1293,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 220901836, guid: eb2e96342b02a414c8c158c645ab6632, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 285017743, guid: eb2e96342b02a414c8c158c645ab6632, type: 3}
-      propertyPath: m_Constraints
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 723707946594319311, guid: eb2e96342b02a414c8c158c645ab6632, type: 3}
-      propertyPath: mainThrustParticles
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2526643107263111676, guid: eb2e96342b02a414c8c158c645ab6632, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1346,7 +1347,7 @@ PrefabInstance:
       objectReference: {fileID: 1230267303}
     - target: {fileID: 2526643107429392665, guid: eb2e96342b02a414c8c158c645ab6632, type: 3}
       propertyPath: m_VersionIndex
-      value: 1585
+      value: 1594
       objectReference: {fileID: 0}
     - target: {fileID: 2526643107429392668, guid: eb2e96342b02a414c8c158c645ab6632, type: 3}
       propertyPath: m_Mesh
@@ -1358,7 +1359,11 @@ PrefabInstance:
       objectReference: {fileID: 1978308050}
     - target: {fileID: 5061675571560906789, guid: eb2e96342b02a414c8c158c645ab6632, type: 3}
       propertyPath: m_VersionIndex
-      value: 2557
+      value: 2566
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099583662847719453, guid: eb2e96342b02a414c8c158c645ab6632, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6145028915563013121, guid: eb2e96342b02a414c8c158c645ab6632, type: 3}
       propertyPath: m_Mesh

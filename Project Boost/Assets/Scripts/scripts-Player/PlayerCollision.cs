@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     /* Variables */
+    [HideInInspector] public bool debug_disableCollision = false;
+
     private LevelManager levelManager = default;
     private PlayerAudio playerAudio = default;
     private PlayerController playerController = default;
@@ -19,7 +21,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (playerController.disableControl) return;
+        if (playerController.disableControl || debug_disableCollision) return;
 
         switch (collision.gameObject.tag)
         {
