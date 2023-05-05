@@ -3,36 +3,45 @@ using UnityEngine;
 
 public class PlayerParticles : MonoBehaviour
 {
-    public ParticleSystem crashExplosion = null;
-    public ParticleSystem winParticles = null;
-    public ParticleSystem mainThrustParticles = null;
-    public ParticleSystem leftThrustParticles = null;
-    public ParticleSystem rightThrustParticles = null;
-    public List<ParticleSystem> mainThrusterParticles = new List<ParticleSystem>();
+    [SerializeField] public ParticleSystem crashExplosion = null;
+    [SerializeField] public ParticleSystem winParticles = null;
+    [SerializeField] public ParticleSystem leftThrustParticles = null;
+    [SerializeField] public ParticleSystem rightThrustParticles = null;
+    [SerializeField] private List<ParticleSystem> mainThrusterParticles = new List<ParticleSystem>();
 
-    public void ToggleMainThrust(bool enable = true)
+    public void Play(ParticleSystem ptSys)
+    {
+        if (!ptSys.isPlaying)
+            ptSys.Play();
+    }
+    public void Stop(ParticleSystem prtSys)
+    {
+        if (prtSys.isPlaying)
+            prtSys.Stop();
+    }
+
+    public void ToggleMainThrust(bool toggleMain = true)
     {
         foreach (ParticleSystem part in mainThrusterParticles)
         {
-            if (enable)
-                part.Play();
+            if (toggleMain)
+                Play(part);
 
-            else if (!enable)
-                part.Stop();
+            else if (!toggleMain)
+                Stop(part);
         }
     }
 
-    public void ToggleSideThrust(bool toggleLeft, bool toggleRight)
+    public void ToggleSideThrust(string LR, bool enable)
     {
-        if (toggleLeft)
-        {
-            leftThrustParticles.Play();
-            rightThrustParticles.Stop();
-        }
-        else if (toggleRight)
-        {
-            leftThrustParticles.Stop();
-            rightThrustParticles.Play();
-        }
+        ParticleSystem particleSystem = null;
+
+        if (LR == "L") particleSystem = leftThrustParticles;
+        else if (LR == "R") particleSystem = rightThrustParticles;
+
+        if (enable)
+                Play(particleSystem);
+            else
+                Stop(particleSystem);
     }
 }

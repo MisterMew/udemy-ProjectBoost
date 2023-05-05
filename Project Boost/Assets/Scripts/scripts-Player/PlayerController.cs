@@ -29,29 +29,39 @@ public class PlayerController : MonoBehaviour
     {
         if (disableControl) return;
 
+        // Thrust
         if (Input.GetKey(KeyCode.Space))
         {
             rigidbody.AddRelativeForce(Vector3.up * mainThrustForce * Time.deltaTime, ForceMode.Force);
             playerAudio.PlayAudio(playerAudio.sfxRocketThrust);
-            playerParticles.mainThrustParticles.Play();
-            playerParticles.ToggleMainThrust(true);
+            playerParticles.ToggleMainThrust();
         }
         else
         {
             playerAudio.PlayAudio(playerAudio.sfxRocketThrust, false);
-            playerParticles.mainThrustParticles.Stop();
             playerParticles.ToggleMainThrust(false);
         }
 
+        // Tilt Left
         if (Input.GetKey(KeyCode.A))
         {
             HandleRotation(rotationAngle);
-            playerParticles.ToggleSideThrust(false, true);
+            playerParticles.ToggleSideThrust("R", true);
         }
-        else if (Input.GetKey(KeyCode.D))
+        else
+        {
+            playerParticles.ToggleSideThrust("R", false);
+        }
+
+        // Tilt Right
+        if (Input.GetKey(KeyCode.D))
         {
             HandleRotation(-rotationAngle);
-            playerParticles.ToggleSideThrust(true, false);
+            playerParticles.ToggleSideThrust("L", true);
+        }
+        else
+        {
+            playerParticles.ToggleSideThrust("L", false);
         }
     }
 
