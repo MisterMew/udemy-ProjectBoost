@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/scenes-CoreLevels/scene_Level01.unity
-    guid: 8da0df1f11692b34fa1186cb61b67f41
+    path: Assets/Scenes/scenes-CoreLevels/scene_CrashSite.unity
+    guid: d16b102e707ce9c40bfae12452b2bf91
   - enabled: 1
     path: Assets/Scenes/scenes-CoreLevels/scene_Level02.unity
     guid: 82d8e1e5470fa5944b1317742ce1f41a
+  - enabled: 1
+    path: Assets/Scenes/scenes-CoreLevels/scene_Level_LeviathanSkull.unity
+    guid: 2f675037025e72a44b86d7e19c387ecb
   m_configObjects: {}
